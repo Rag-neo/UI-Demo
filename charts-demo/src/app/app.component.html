@@ -1,5 +1,5 @@
 <div>
-  <div>
+  <div >
     <div id = "container-1" style = "width:100%; height:46%; padding-left: 5%; padding-right: 5%;">
                 <div id ="left-c1" style = "float:left; width: 20%;">
                   <ngx-gauge 
@@ -44,28 +44,83 @@
                     [height]="treeMapProperties.height">
                     </google-chart>
                   </div>
-                    <div id = "right-c2" style = "float:left; width: 55%;">
+                    <div id = "right-c2" style = "float:left; height:50%; width: 55%;">
                       <ngx-datatable 
+                      [ngStyle]="{'height':'400px'}"
                       class="material"
-                      style="height: 20%;"
                       [rows]="rows" 
-                      [columnMode]="'standard'" 
+                      [columnMode]="'force'" 
                       [headerHeight]="50" 
-                      [footerHeight]="50"
-                      [rowHeight]="50" 
+                      [footerHeight]="0"
+                      [rowHeight]="40" 
                       [scrollbarV]="true" 
+                      [scrollbarH]="false" 
+                      [virtualization]="true"
                       [sorts]="[{prop: 'name', dir: 'desc'}]">
-                        <ngx-datatable-column name="Company">
+                        <ngx-datatable-column name="Country">
                           <ng-template let-row="row" ngx-datatable-cell-template>
-                            {{row.company}}
+                            {{row.country}}
                           </ng-template>
                         </ngx-datatable-column>
-                        <ngx-datatable-column name="Name">
+                        <ngx-datatable-column name="January">
                           <ng-template let-row="row" ngx-datatable-cell-template>
-                            {{row.name}}
+                            {{row.January}}
                           </ng-template>
                         </ngx-datatable-column>
-                        <ngx-datatable-column name="Gender">
+                        <ngx-datatable-column name="February">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.February}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="March">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.March}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="April">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.April}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="May">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.May}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="June">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.June}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="July">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.July}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="August">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.August}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="October">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.October}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="November">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.November}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="December">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.December}}
+                          </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Total">
+                          <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{row.total}}
+                          </ng-template>
                         </ngx-datatable-column>
                       </ngx-datatable>
                     </div>
