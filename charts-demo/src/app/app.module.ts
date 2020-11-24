@@ -25,7 +25,7 @@ import { AgmCoreModule } from '@agm/core';
     GoogleChartsModule,
     NgxDatatableModule,
     // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyCxxWUuhEoR0L-UBBQ640GvEURvW4Buevo'
+    //   apiKey: ''
     // })
     
   ],
