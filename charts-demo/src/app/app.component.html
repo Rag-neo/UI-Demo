@@ -1,7 +1,7 @@
 <div>
-  <div >
-    <div id = "container-1" style = "width:100%; height:46%; padding-left: 5%; padding-right: 5%;">
-                <div id ="left-c1" style = "float:left; width: 20%;">
+  <div id="wrap" >
+    <div id = "container-1" style = "width:90%; height:50%; padding-left: 5%; padding-right: 5%;">
+                <div id ="left-c1" style = "float:left; width: 20%; ">
                   <ngx-gauge 
                   [min]="100"
                   [max]="1000"
@@ -20,7 +20,8 @@
                 [data]="doughnutChartProperties.data"
                 [options]="doughnutChartProperties.options"
                 [width]="doughnutChartProperties.width"
-                [height]="doughnutChartProperties.height">
+                [height]="doughnutChartProperties.height"
+                (select)="onClick($event)">
                   </google-chart>
                 </div>
                 <div id = "right-c1" style = "float:left; width: 50%;">
@@ -33,7 +34,7 @@
                   [height]="lineChartProperties.height">
                   </google-chart>
                 </div>
-    <div id = "container-2" style = "width:100%; height:46%;">
+    <div id = "container-2" style = "width:100%; height:50%;">
                   <div id = "left-c2" style = "float:left; width: 40%;">
                     <google-chart #treemap
                     [title]="treeMapProperties.title"
@@ -44,9 +45,24 @@
                     [height]="treeMapProperties.height">
                     </google-chart>
                   </div>
-                    <div id = "right-c2" style = "float:left; height:50%; width: 55%;">
+                  <div id = "right-c2" style = "float:left; height:50%; width: 60%;">
+                    <div >
+                      <ejs-maps 
+                      style="height:300px; width:400px"
+                      id='rn-container'>
+                        <e-layers>
+                          <e-layer  
+                          [shapeData]= 'shapeData' 
+                          [shapePropertyPath] ='shapePropertyPath'
+                          [bubbleSettings] = 'bubbleSettings'
+                          [shapeDataPath] = 'shapeDataPath'
+                          ></e-layer>
+                        </e-layers>
+                      </ejs-maps>
+                    </div>
+                    <div >
                       <ngx-datatable 
-                      [ngStyle]="{'height':'400px'}"
+                      [ngStyle]="{'height':'200px'}"
                       class="material"
                       [rows]="rows" 
                       [columnMode]="'force'" 
@@ -124,10 +140,11 @@
                         </ngx-datatable-column>
                       </ngx-datatable>
                     </div>
+                  </div>
     </div>
   </div>
   </div>
-  <div class="navbar" style="height: 10%; ">
+  <div class="navbar" >
     <a href="#home" class="active">Categories</a>
     <a href="#news">Brands</a>
     <a href="#contact">Countries</a>
@@ -136,10 +153,4 @@
   </div>
 </div>
 
- <!-- <h1>{{ title }}</h1> -->
 
- <!-- this creates a google map on the page with the given lat/lng from -->
- <!-- the component as the initial center of the map: -->
- <!-- <agm-map [latitude]="lat" [longitude]="lng" style="height: 300px;">
-   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
- </agm-map> -->

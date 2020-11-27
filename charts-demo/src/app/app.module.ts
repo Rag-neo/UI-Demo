@@ -12,6 +12,10 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AgmCoreModule } from '@agm/core';
 
 
+import { MapsModule } from '@syncfusion/ej2-angular-maps';
+import { LegendService, MarkerService, MapsTooltipService, DataLabelService, BubbleService, NavigationLineService, SelectionService, AnnotationsService, ZoomService } from '@syncfusion/ej2-angular-maps';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,12 +28,13 @@ import { AgmCoreModule } from '@agm/core';
     NgxGaugeModule,
     GoogleChartsModule,
     NgxDatatableModule,
+    MapsModule,
     // AgmCoreModule.forRoot({
     //   apiKey: ''
     // })
     
   ],
-  providers: [],
+  providers: [LegendService, MarkerService, MapsTooltipService, DataLabelService, BubbleService, NavigationLineService , SelectionService, AnnotationsService, ZoomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
