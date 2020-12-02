@@ -4,13 +4,13 @@ import { Maps, Bubble } from '@syncfusion/ej2-angular-maps';
 import { DataService } from './data.service';
 import { world_map } from './world-map';
 Maps.Inject(Bubble);
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css','../styles/tailwind.css']
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class  AppComponent {
 
   constructor(
     private dataService : DataService) {
@@ -119,7 +119,7 @@ export class AppComponent {
       headerHeight: 15,
       showScale: true
     },
-    width: 400,
+    width: 360,
     height: 500,
   }
 
