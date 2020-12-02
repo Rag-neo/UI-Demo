@@ -166,6 +166,7 @@ export class  AppComponent {
     this.gaugeMax=gaugeDataTemp['max'];
     this.gaugeValue=gaugeDataTemp['value'];
     this.rows=this.dataService.getDataTableData(selectedYear);
+    this.treeMapProperties.data=this.dataService.getTreeMapData(selectedYear);
   }
   
 }
