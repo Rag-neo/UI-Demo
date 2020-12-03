@@ -7,17 +7,19 @@
       </div>
       <!---Guage-->
       <div class="bg-white my-2 px-8 shadow-md flex justify-center">
+       <div>
         <ngx-gauge
           [min]="gaugeMin"
           [max]="gaugeMax"
           [type]="gaugeType"
           [value]="gaugeValue"
-          [label]="gaugeLabel"
           [append]="gaugeAppendText"
           [prepend]="gaugePrependText"
           [thick]="30"
         >
         </ngx-gauge>
+        <div class="flex justify-center items-center font-semibold -mt-5">{{gaugeLabel}}</div>
+      </div>
       </div>
     </div>
 
